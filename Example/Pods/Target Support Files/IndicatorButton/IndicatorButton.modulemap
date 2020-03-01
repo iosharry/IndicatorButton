@@ -1,6 +1,0 @@
-framework module IndicatorButton {
-  umbrella header "IndicatorButton-umbrella.h"
-
-  export *
-  module * { export * }
-}
