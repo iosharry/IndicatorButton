@@ -1,0 +1,22 @@
+{
+  "name": "IndicatorButton",
+  "version": "0.1.0",
+  "summary": "A short description of IndicatorButton.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/gwangyonglee/IndicatorButton",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "gwangyonglee": "gwangyonglee92@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/gwangyonglee/IndicatorButton.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "IndicatorButton/Classes/**/*"
+}

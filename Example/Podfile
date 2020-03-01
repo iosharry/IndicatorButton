@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'IndicatorButton_Example' do
+  pod 'IndicatorButton', :path => '../'
+
+  target 'IndicatorButton_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

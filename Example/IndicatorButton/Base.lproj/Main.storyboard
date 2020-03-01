@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="IndicatorButton_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="Ll6-9W-npB">
+                                <rect key="frame" x="125" y="171.5" width="125" height="324"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLA-52-K7D" customClass="IndicatorButton" customModule="IndicatorButton">
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="PP2-yn-OaA"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="touchUpInsideButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="jYj-fV-PwY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bko-6B-r7W" customClass="IndicatorButton" customModule="IndicatorButton">
+                                        <rect key="frame" x="0.0" y="96" width="125" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="vbW-TS-j37"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="touchUpInsideButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="MUY-Ua-LGU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DaG-L9-xdt" customClass="IndicatorButton" customModule="IndicatorButton">
+                                        <rect key="frame" x="0.0" y="192" width="125" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="6nh-WY-wvf"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="touchUpInsideButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="eIw-y4-BhD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hab-Ul-Okw" customClass="IndicatorButton" customModule="IndicatorButton">
+                                        <rect key="frame" x="0.0" y="288" width="125" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="eGy-aQ-p6K"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="touchUpInsideButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Ftn-xB-6dG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="eg4-E7-9kY"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ll6-9W-npB" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="CId-XR-plF"/>
+                            <constraint firstItem="Ll6-9W-npB" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="uiJ-LQ-YeY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="flashButton" destination="DaG-L9-xdt" id="wt1-Fb-0ji"/>
+                        <outlet property="normalButton" destination="fLA-52-K7D" id="3L4-OQ-6Pk"/>
+                        <outlet property="pulseButton" destination="hab-Ul-Okw" id="jAa-Bs-H3S"/>
+                        <outlet property="shakeButton" destination="Bko-6B-r7W" id="fS5-j3-Ad7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="134"/>
+        </scene>
+    </scenes>
+</document>
