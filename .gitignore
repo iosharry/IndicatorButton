@@ -1,0 +1,24 @@
+# OS X
+.DS_Store
+
+## Build generated
+DerivedData
+build/
+
+
+# Xcode
+/*.xcodeproj
+**/xcuserdata
+**/xcshareddata
+*.xccheckout
+
+## Obj-C/Swift specific
+*.hmap
+*.ipa
+
+# Bundler
+.bundle
+
+# CocoaPods
+Pods/
+
