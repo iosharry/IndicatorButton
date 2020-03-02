@@ -1,6 +1,6 @@
 language: objective-c
 osx_image: xcode11.3
 xcode_project: IndicatorButton.xcodeproj
-xcode_scheme: IndicatorButtonTests
+xcode_scheme: IndicatorButton
 xcode_destination: "platform=iOS Simulator,OS=12.0,name=iPhone X"
 
