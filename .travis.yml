@@ -1,0 +1,8 @@
+os: osx
+osx_image: xcode11.3
+xcode_project: IndicatorButton.xcodeproj
+xcode_scheme: IndicatorButton
+xcode_destination: platform=iOS Simulator, OS=12.0, name: iPhone 8
+language: swift
+
+
