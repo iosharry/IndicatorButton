@@ -9,7 +9,7 @@ jobs:
     strategy:	            
       matrix:             
         env:
-          - sdk: iphonesimulator12.0
+          - sdk: iphonesimulator13.2
             destination: platform=iOS Simulator,name=iPhone X,OS=12.0
             
     steps:                
