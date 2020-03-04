@@ -1,10 +1,7 @@
 name: CI 
 
 on:     
-  push: 
-    branches:
-    - develop
-    - feature/*
+  [push]
 
 jobs:   
   test:
