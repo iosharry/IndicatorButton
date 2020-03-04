@@ -7,7 +7,6 @@ build/
 
 
 # Xcode
-/*.xcodeproj
 **/xcuserdata
 *.xccheckout
 
