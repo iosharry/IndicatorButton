@@ -16,7 +16,7 @@ build/
 *.ipa
 
 # Bundler
-.bundle
+#.bundle
 
 # CocoaPods
 Pods/
