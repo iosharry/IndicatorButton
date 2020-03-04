@@ -30,3 +30,4 @@ jobs:
         SCHEME: IndicatorButton
         SDK: ${{ matrix.env.sdk }}
         DESTINATION: ${{ matrix.env.destination }}
+
