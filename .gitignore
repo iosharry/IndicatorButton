@@ -9,7 +9,6 @@ build/
 # Xcode
 /*.xcodeproj
 **/xcuserdata
-**/xcshareddata
 *.xccheckout
 
 ## Obj-C/Swift specific
