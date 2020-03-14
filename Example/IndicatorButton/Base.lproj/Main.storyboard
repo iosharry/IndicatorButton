@@ -79,6 +79,7 @@
                         <outlet property="normalButton" destination="fLA-52-K7D" id="3L4-OQ-6Pk"/>
                         <outlet property="pulseButton" destination="hab-Ul-Okw" id="jAa-Bs-H3S"/>
                         <outlet property="shakeButton" destination="Bko-6B-r7W" id="fS5-j3-Ad7"/>
+                        <outlet property="stackView" destination="Ll6-9W-npB" id="PGW-Fp-dGa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
