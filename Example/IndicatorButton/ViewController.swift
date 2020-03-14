@@ -11,16 +11,20 @@ import IndicatorButton
 
 class ViewController: UIViewController {
 
+    // MARK: - IBOutlet
+    @IBOutlet weak var stackView: UIStackView!
 	@IBOutlet weak var normalButton: IndicatorButton!
 	@IBOutlet weak var shakeButton: IndicatorButton!
 	@IBOutlet weak var flashButton: IndicatorButton!
 	@IBOutlet weak var pulseButton: IndicatorButton!
 	
+    // MARK: - Life Cycle
 	override func viewDidLoad() {
         super.viewDidLoad()
 		initShakeButton()
 		initFlashButton()
 		initPulseButton()
+        initProgrammaticallyButton()
     }
 
 	private func initShakeButton() {
@@ -34,6 +38,12 @@ class ViewController: UIViewController {
 	private func initPulseButton() {
 		pulseButton.type = .pulse
 	}
+    
+    private func initProgrammaticallyButton() {
+        let indicatorButton = IndicatorButton(frame: CGRect(x: 0, y: 0, width: 125, height: 36), text: "button")
+        indicatorButton.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
+        stackView.addArrangedSubview(indicatorButton)
+    }
 
 	@IBAction func touchUpInsideButton(_ sender: IndicatorButton) {
 		sender.startAnimating {
@@ -44,5 +54,15 @@ class ViewController: UIViewController {
 			}
 		}
 	}
+    
+    @objc func buttonClicked(_ sender: IndicatorButton) {
+        sender.startAnimating {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+                sender.stopAnimating {
+                    sender.isSelected = !sender.isSelected
+                }
+            }
+        }
+    }
 }
 
