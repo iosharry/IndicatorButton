@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name           		  = 'IndicatorButton'
-  s.version        		  = '0.1.0'
+  s.version        		  = '0.1.1'
   s.summary        		  = 'Easily manage state values with UIButton with UIActivityIndicatorView (UIButtons include simple animation)'
   s.homepage       		  = 'https://github.com/gwangyonglee/IndicatorButton'
   s.license        		  = { :type => 'MIT', :file => 'LICENSE' }
