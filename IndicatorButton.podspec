@@ -16,4 +16,5 @@ Pod::Spec.new do |s|
   s.source         		  = { :git => 'https://github.com/gwangyonglee/IndicatorButton.git', :tag => s.version.to_s }
   s.ios.deployment_target = '12.0'
   s.source_files 		  = 'IndicatorButton/Classes/**/*'
+  s.swift_version         = '5.0'
 end
