@@ -95,6 +95,52 @@ public final class IndicatorButton: UIButton {
 	public var selectedIndicatorColor: UIColor = .gray
 	
 	// MARK: - Life Cycle
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
+    public init(frame: CGRect = .zero,
+                text: String? = nil,
+                font: UIFont? = nil,
+                titleColor: UIColor = .black,
+                selectedTitleColor: UIColor = .white,
+                borderWidth: CGFloat = 1.0,
+                cornerRadius: CGFloat = 8.0,
+                bgColor: UIColor = .white,
+                borderColor: UIColor = .clear,
+                shadowColor: UIColor = .black,
+                indicatorColor: UIColor = .gray) {
+        super.init(frame: frame)
+        
+        // button set up
+        tintColor = .clear
+        
+        if let text = text {
+            setTitle(text, for: .normal)
+        }
+        titleLabel?.font = font
+        setTitleColor(titleColor, for: .normal)
+        setTitleColor(selectedTitleColor, for: .selected)
+        
+        layer.borderWidth = borderWidth
+        layer.cornerRadius = cornerRadius
+        layer.backgroundColor = bgColor.cgColor
+        layer.borderColor = borderColor.cgColor
+        
+        layer.shadowColor = shadowColor.cgColor
+        layer.shadowOffset = CGSize(width: 0, height: 6)
+        layer.shadowRadius = 8
+        layer.shadowOpacity = 0.5
+        
+        // activityindicator set up
+        indicatorView.color = indicatorColor
+        indicatorView.hidesWhenStopped = true
+    }
+    
+    required public init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+    
 	override public func awakeFromNib() {
 		super.awakeFromNib()
 		initIndicatorButton()
