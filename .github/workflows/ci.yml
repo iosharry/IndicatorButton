@@ -1,0 +1,32 @@
+name: CI 
+
+on:     
+  [push]
+
+jobs:   
+  test:
+    runs-on: macOS-latest 
+    strategy:	            
+      matrix:             
+        env:
+          - sdk: iphonesimulator13.2
+            destination: platform=iOS Simulator,name=iPhone X,OS=12.0
+            
+    steps:                
+    - uses: actions/checkout@v1    
+
+    - name: Build And test
+      run: |
+        set -o pipefail && xcodebuild clean build test \
+          -project "$PROJECT" \
+          -scheme "$SCHEME" \
+          -sdk "$SDK" \
+          -destination "$DESTINATION" \
+          -configuration Debug \
+          -enableCodeCoverage YES \
+          CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty -c;
+      env:
+        PROJECT: IndicatorButton.xcworkspace
+        SCHEME: IndicatorButton
+        SDK: ${{ matrix.env.sdk }}
+        DESTINATION: ${{ matrix.env.destination }}
